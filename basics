@@ -1,0 +1,16 @@
+  Module 1: SQL & Database Basics
+ 1. What is a Database?
+An organized collection of data stored in tables (rows and columns) so it can be easily accessed, managed, and updated.
+ 2. Key Terms
+ * - you want to select all the rows (in the shop there are 100 things you don't name them but select them all)
+ FROM - Table: A collection of data organized into rows and columns (table named red)
+Select - Row (Record): A single entry in a table (imagine the sweets in the shop ).
+Where - Column (Field): A specific attribute of the data (email, age).
+Primary Key (PK):A unique ID for every row.
+Foreign Key (FK): A link connecting two related tables.
+
+3. Main SQL Command Categories
+DDL (Structure): CREATE, ALTER, DROP (changes table shape)
+DML (Data): SELECT, INSERT, UPDATE, DELETE (handles table content)
+
+ Next: Writing your first `SELECT` queries!
