@@ -1,37 +1,136 @@
-Module 1: SQL & Database Basics
+# Module 1: SQL & Database Basics
 
-1. What is a Database?
-An organized collection of data stored in tables (rows and columns) so it can be easily accessed, managed, and updated.
+## 1. What is a Database? (Short and simple)
+A database is an organized place to store information so you can find and change it easily. Think of it like a spreadsheet with many sheets (tables) where each sheet stores related information.
 
-2. Key Terms
-* - you want to select all the rows (in the shop there are 100 things you don't name them but select them all)
-FROM - Table: A collection of data organized into rows and columns (table named red)
-Select - Row (Record): A single entry in a table (imagine the sweets in the shop ).
-Where - Column (Field): A specific attribute of the data (email, age).
-Primary Key (PK):A unique ID for every row.
-Foreign Key (FK): A link connecting two related tables.
+## 2. Key Terms (beginner-friendly)
+- Table (FROM): A named sheet that holds rows and columns (e.g., a table named `shop`).
+- Row / Record (SELECT): One single entry in a table (one sweet in the shop).
+- Column / Field (WHERE): A property for every row (e.g., `name`, `price`, `email`).
+- Primary Key (PK): A column that uniquely identifies each row (like an ID number).
+- Foreign Key (FK): A column that links a row in one table to a row in another table.
 
-3. Main SQL Command Categories
-DDL (Structure): CREATE, ALTER, DROP (changes table shape)
-DML (Data): SELECT, INSERT, UPDATE, DELETE (handles table content)
+Visual: a table with columns and rows
 
-Practice What You Have Learned
+| id (PK) | name       | price |
+|--------:|------------|------:|
+| 1       | Chocolate  |  150  |
+| 2       | Candy      |   50  |
 
-Try these tasks on your own:
-- Write a query to select all rows from a table.
-- Write a query to select only specific columns.
-- Write a query to filter rows using a condition.
-- Create a new table with a primary key.
-- Insert one record into a table.
-- Update one value in a table.
+Diagram (simple):
 
-Example practice question:
-- Show all customers whose age is greater than 18.
-- Query: SELECT * FROM customers WHERE age > 18;
+students (id PK, name, email)
+  |
+  |-- student_id (FK) in `grades` links a student's grades
 
-Challenge:
-- Create a table called `students` with `id`, `name`, and `email`.
-- Insert 3 students.
-- Select only the `name` column.
+grades (id PK, student_id FK, subject, score)
 
-Next: Writing your first `SELECT` queries!
+## 3. Main SQL Command Categories (very short)
+- DDL (Structure): CREATE, ALTER, DROP — used to change the shape of tables.
+- DML (Data): SELECT, INSERT, UPDATE, DELETE — used to read and change table contents.
+
+---
+
+## Practice — Interactive, beginner-friendly exercises
+Instructions: Try each exercise yourself first. When you're ready to check, reveal the answer below the "Answers" section.
+
+Exercise 1 — Select all rows
+- Task: List everything in the `shop` table.
+- Try this:  ```sql
+SELECT * FROM shop;
+```
+
+Exercise 2 — Select specific columns with a condition
+- Task: Show `name` and `price` for items that cost more than 100.
+- Try this:  ```sql
+SELECT name, price FROM shop WHERE price > 100;
+```
+- Hint: Start with SELECT name, price and add WHERE price > 100.
+
+Exercise 3 — Insert a new row (safe example)
+- Task: Add a new item to the `shop` table (columns: id, name, price).
+- Try this:  ```sql
+INSERT INTO shop (id, name, price) VALUES (3, 'Gum', 20);
+```
+- Hint: Pick an id that is not used already.
+
+Exercise 4 — Update data (preview before running)
+- Task: Change the price of an item with id = 3 to 25.
+- Try this:
+  1) Preview which row will change:
+  ```sql
+SELECT * FROM shop WHERE id = 3;
+```
+  2) Update it:
+  ```sql
+UPDATE shop SET price = 25 WHERE id = 3;
+```
+- Hint: Always SELECT first to confirm the right rows.
+
+Exercise 5 — Create a simple table
+- Task: Create a `students` table with id (PK), name, and email.
+- Try this:  ```sql
+CREATE TABLE students (
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+  email TEXT
+);
+```
+
+Mini challenge — Put it together
+1) Create `students` table.
+2) Insert 3 rows.
+3) Show only the `name` column.
+
+Try:  ```sql
+INSERT INTO students (id, name, email) VALUES (1, 'Aisha', 'aisha@example.com');
+INSERT INTO students (id, name, email) VALUES (2, 'Bilal', 'bilal@example.com');
+INSERT INTO students (id, name, email) VALUES (3, 'Chen', 'chen@example.com');
+
+SELECT name FROM students;
+```
+
+---
+
+## Answers (reveal after you try)
+
+Answer 1:
+```sql
+SELECT * FROM shop;
+```
+
+Answer 2:
+```sql
+SELECT name, price FROM shop WHERE price > 100;
+```
+
+Answer 3:
+```sql
+INSERT INTO shop (id, name, price) VALUES (3, 'Gum', 20);
+```
+
+Answer 4:
+```sql
+SELECT * FROM shop WHERE id = 3;
+UPDATE shop SET price = 25 WHERE id = 3;
+```
+
+Answer 5 (create table):
+```sql
+CREATE TABLE students (
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+  email TEXT
+);
+```
+
+Mini challenge solution is the set of INSERTs followed by SELECT name FROM students;
+
+---
+
+Tips for students
+- Try changing values and re-running queries to see what happens.
+- Use a small test database so you can practice without worrying about real data.
+- If your environment supports transactions, wrap multiple changes in BEGIN; ... COMMIT; so you can ROLLBACK if needed.
+
+Next: If you'd like, I can convert this into a beginner worksheet (PDF or Markdown with hidden answers), an interactive SQL playground sample, or expand with images and step-by-step screenshots.
