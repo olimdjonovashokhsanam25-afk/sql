@@ -27,5 +27,5 @@ grades (id PK, student_id FK, subject, score)
 
  3. Main SQL Command Categories (very short)
 - DDL (Structure): CREATE, ALTER, DROP — used to change the shape of tables.
-- DML (Data): SELECT, INSERT, UPDATE, DELETE — used to read and change table contents.
+- DML (Data): SELECT, INSERT, UPDATE, DELETE — used to read and change table contents..
 
