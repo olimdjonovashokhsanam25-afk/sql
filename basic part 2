@@ -1,8 +1,5 @@
-# SQL Day 2 — Beginner-friendly routine
-
-Estimated time: 45–75 minutes
-
-Goals
+basic 2 
+ last time we learned about the basic queries and today we will be praticing them along 
 - Practice basic SELECT queries
 - Learn filtering with WHERE
 - Sort results with ORDER BY and limit with LIMIT
@@ -119,7 +116,10 @@ SELECT c.id, c.name, COALESCE(SUM(o.total),0) AS total_spent
 FROM customers c
 LEFT JOIN orders o ON o.customer_id = c.id
 GROUP BY c.id, c.name
-ORDER BY total_spent DESC;
+ORDER BY total_spent DESC;  
+
+
+you can use Postgresql or SQLite 
 
 Next steps
 - Run these queries in your local DB or an online editor (SQLite online, DB Fiddle, or pgfiddle).
