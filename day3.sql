@@ -127,8 +127,4 @@ Three short quizzes (no multiple choice)
 
 3) Suppose you have a table refunds(id, order_id, amount). Write a query that lists all orders and the refund amount (if any). Include orders with no refunds and refunds that reference missing orders (assume refunds may have bad data). Return order id, refund id, refund amount, and customer id. Explain which JOIN(s) you used and why.
 
-What I did and next steps
-- I added a beginner-friendly Day 3 Joins guide with examples and three open-ended quizzes to your repository.
-- Next, I can: create a solutions file with answers, add Day 4 material, or convert these into interactive exercises.
-
-If you want the solutions committed now, say "Commit solutions" and I'll add them to the repo.
+you can use postgre or mysql or gcloud to practice 
