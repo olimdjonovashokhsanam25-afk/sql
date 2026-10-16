@@ -6,6 +6,8 @@ Welcome to my SQL learning repository! This project documents my daily/weekly pr
  📌 About This Project
 As a Computer Science student, I am building this repository to track my database management skills, store hands-on query practices, and eventually turn this into a comprehensive resource or toolset.
 
+at the end of my  sql journey i will be doing a project where it combines splunk, database and threat inteligence tools.
+
 🛠️ Tech Stack & Tools
 - Database Management System (DBMS): PostgreSQL / MySQL
 - Tools: DBeaver / pgAdmin / VS Code 
