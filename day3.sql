@@ -1,7 +1,5 @@
 # SQL Day 3 — Joins (Inner, Left/Right/Full Outer) — Beginner friendly
 
-Estimated time: 30–50 minutes
-
 Quick overview
 - Joins combine rows from two (or more) tables using a related column (usually a key).
 - Use joins when you need data that lives in different tables (e.g., customers and their orders).
